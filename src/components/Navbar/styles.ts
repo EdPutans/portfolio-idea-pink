@@ -3,7 +3,7 @@ import { theme } from "../../theme";
 
 export const Container = styled.div`
   padding: 10px;
-  background-color: ${(props) => props.theme.DARK_GREY};
+  background-color: ${(props) => props.theme.colors};
   position: fixed;
   display: flex;
   top: 0;
