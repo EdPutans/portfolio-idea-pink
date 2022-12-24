@@ -1,9 +1,8 @@
 import styled from "styled-components";
-import { theme } from "../../theme";
 
 export const Container = styled.div`
   padding: 10px;
-  background-color: ${(props) => props.theme.colors};
+  background-color: ${(props) => props.theme.colours.main};
   position: fixed;
   display: flex;
   top: 0;
@@ -14,9 +13,9 @@ export const Container = styled.div`
 export const Item = styled.a`
   padding: 0 10px;
   text-decoration: none;
-  color: ${theme.WHITE};
+  color: ${(props) => props.theme.colours.textSecondary};
   cursor: pointer;
   &:hover {
-    color: ${theme.LIGHTEST_GREY};
+    color: ${(props) => props.theme.colours.textSecondary};
   }
 `;

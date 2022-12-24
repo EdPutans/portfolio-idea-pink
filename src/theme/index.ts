@@ -1,35 +1,39 @@
-import * as colors from "./colors";
-// import { EdTheme } from "styled-components";
+const TEXT_BLACK = "#505050";
+const PINK = "#D369B6";
+const LIGHT_BLUE = "#69C0D3";
+const WHITE = "#FFFFFF";
+const LIGHTEST_GREY = "#E5E5E5";
+const GREY = "#C4C4C4";
+const DARK_GREY = "#575757";
 
-export const theme = {
-  TEXT_BLACK: colors.TEXT_BLACK,
-  PINK: colors.PINK,
-  LIGHT_BLUE: colors.LIGHT_BLUE,
-  WHITE: colors.WHITE,
-  LIGHTEST_GREY: colors.LIGHTEST_GREY,
-  GREY: colors.GREY,
-  DARK_GREY: colors.DARK_GREY,
-};
-
-export const proTheme = {
+export const darkTheme: ThemeType = {
   borderRadius: "0px",
-  colors: {
-    main: colors.GREY,
-    light: colors.LIGHTEST_GREY,
-    supplement: colors.DARK_GREY,
-    darkText: colors.TEXT_BLACK,
-    lightText: colors.DARK_GREY,
+  colours: {
+    main: DARK_GREY,
+    light: GREY,
+    supplement: DARK_GREY,
+    textPrimary: WHITE,
+    textSecondary: LIGHTEST_GREY,
   },
 };
-export const funTheme = {
+export const lightTheme: ThemeType = {
   borderRadius: "8px",
-  colors: {
-    main: colors.PINK,
-    light: colors.LIGHTEST_GREY,
-    supplement: colors.LIGHT_BLUE,
-    darkText: colors.TEXT_BLACK,
-    lightText: colors.DARK_GREY,
+  colours: {
+    main: PINK,
+    light: LIGHTEST_GREY,
+    supplement: LIGHT_BLUE,
+    textPrimary: TEXT_BLACK,
+    textSecondary: LIGHTEST_GREY,
   },
 };
 
-export type ThemeType = typeof proTheme; // This is the type definition for my theme object.
+export type ThemeType = {
+  borderRadius: `${number}px`;
+  colours: {
+    main: string;
+    light: string;
+    supplement: string;
+    textPrimary: string;
+    textSecondary: string;
+  };
+};
